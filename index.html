@@ -1,1 +1,76 @@
 
+Got it - I'll build you the Uneventful site with examples so you can see it live.
+
+*Here is your full site - copy this to GitHub:*
+
+1. Go to GitHub.com -> shuwa-tech -> Vault-1 or create new repo `uneventful`
+2. Create new file `index.html` -> Paste all this -> Save
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uneventful — Quiet Kampala</title>
+<style>
+body{margin:0;background:#f9f6f1;color:#111;font-family:Georgia,serif}
+header{padding:40px 20px;text-align:center;border-bottom:1px solid #ddd}
+header h1{font-size:42px;margin:0;font-weight:400;letter-spacing:-1px}
+header p{color:#666;font-style:italic;margin-top:10px}
+.container{max-width:700px;margin:0 auto;padding:20px}
+.card{background:#fff;border:1px solid #e8e0d5;border-radius:12px;margin-bottom:24px;overflow:hidden}
+.card img{width:100%;height:240px;object-fit:cover;filter:grayscale(20%)}
+.card-body{padding:18px}
+.tag{display:inline-block;background:#f0ece3;padding:4px 10px;border-radius:20px;font-size:12px;margin-right:6px;color:#555}
+h2{font-weight:400;margin:10px 0 6px 0}
+.meta{color:#888;font-size:13px;margin-bottom:8px}
+.desc{line-height:1.6;color:#333}
+</style>
+</head>
+<body>
+<header>
+<h1>Uneventful</h1>
+<p>Not every day needs an event. Quiet places in Kampala.</p>
+</header>
+<div class="container" id="feed"></div>
+
+<script>
+const spots = [
+{
+title:"Endiro Coffee, Kisementi",
+tags:["work-friendly","quiet morning","coffee 12k"],
+noise:"Low",
+best:"7am - 11am",
+img:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800",
+desc:"No loud music before 11am. Good WiFi, you can sit 3 hours with one coffee. Staff don't rush you."
+},
+{
+title:"Munyonyo Lakeside - Public side",
+tags:["thinking","free","sunset"],
+noise:"Very Low",
+best:"5pm - 6:30pm",
+img:"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+desc:"Just water and wind. No bar, no speaker. Carry your own tea. Best for reading or just doing nothing."
+},
+{
+title:"Uganda Museum Gardens",
+tags:["calm","15k entry","weekday"],
+noise:"Low",
+best:"Weekdays 2pm-4pm",
+img:"https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=800",
+desc:"Most people go inside, garden stays empty. Benches under trees, birds, almost zero people on Tuesday."
+}
+];
+
+let html="";
+spots.forEach(s=>{
+html+=`<div class="card"><img src="${s.img}"><div class="card-body"><div>${s.tags.map(t=>`<span class=tag>${t}</span>`).join("")}</div><h2>${s.title}</h2><div class=meta>Noise: ${s.noise} • Best: ${s.best}</div><div class=desc>${s.desc}</div></div></div>`
+});
+document.getElementById("feed").innerHTML=html;
+</script>
+</body>
+</html>
+Paste that and your site is live in 2 minutes. Then you can replace the 3 examples with real places you know.
+
+Want me to add a *Submit Place* button so people can send you their quiet spots? Say *yes* and I will add it.
+
+And for Mobile Money business - you said "2" - do you want me to make you a simple daily profit calculator sheet for MTN/Airtel?
